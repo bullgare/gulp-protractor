@@ -98,6 +98,7 @@ Type: `Array|Object`
 Default: `[]`
 
 Arguments get passed directly to the webdriver-manager call.
+
 Example 1:
 ```javascript
 var path = require('path'),
