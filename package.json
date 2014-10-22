@@ -1,12 +1,12 @@
 {
-  "name": "gulp-protractor",
-  "version": "0.0.11",
-  "description": "A helper for protactor and gulp",
+  "name": "gulp-protractor-burked",
+  "version": "0.0.1",
+  "description": "A helper for protactor and gulp forked by bullgare",
   "keywords": [
     "gulpfriendly",
     "protactor"
   ],
-  "homepage": "https://github.com/mllrsohn/gulp-protractor",
+  "homepage": "https://github.com/bullgare/gulp-protractor",
   "bugs": "https://github.com/mllrsohn/gulp-protractor/issues",
   "author": {
     "name": "Steffen Müller",
@@ -16,7 +16,7 @@
   "main": "./index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mllrsohn/gulp-protractor.git"
+    "url": "git://github.com/bullgare/gulp-protractor.git"
   },
   "scripts": {
     "test": "mocha"
