@@ -88,7 +88,7 @@ var path = require('path'),
 
 gulp.task('webdriver-update', function (callback) {
 	webdriver_update({
-		out_dir: _path.resolve(pathRoot)
+		out_dir: path.resolve(pathRoot)
 	}, callback);
 });
 ```
@@ -107,7 +107,7 @@ var path = require('path'),
 gulp.task('webdriver-update', function (callback) {
 	webdriver_update({
 		args: {
-			out_dir: _path.resolve(pathRoot)
+			out_dir: path.resolve(pathRoot)
 		}
 	}, callback);
 });
@@ -121,7 +121,7 @@ var path = require('path'),
 gulp.task('webdriver-update', function (callback) {
 	webdriver_update({
 		args: [
-			'--out_dir=' + _path.resolve(pathRoot) + ''
+			'--out_dir=' + path.resolve(pathRoot) + ''
 		]
 	}, callback);
 });
