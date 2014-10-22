@@ -96,7 +96,21 @@ var webdriver_update = function(opts, cb) {
 				args.push("--" + element);
 			});
 		}
-	}	
+		if (options.out_dir) {
+			args.push("--out_dir=" + options.out_dir);
+		}
+		if (options.args) {
+			if (Array.isArray(options.args)) {
+				args.push.apply(args, options.args);
+			}
+			else if (options.args != null && typeof options.args === 'object') {
+				Object.keys(options.args).forEach(function (key) {
+					args.push("--" + key + "=" + options.args[key]);
+				});
+			}
+		}
+	}
+
 	child_process.spawn(path.resolve(getProtractorDir() + '/webdriver-manager'+winExt), args, {
 		stdio: 'inherit'
 	}).once('close', callback);
