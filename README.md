@@ -69,6 +69,64 @@ Default: `false`
 
 Enables Protractor's [debug mode](https://github.com/angular/protractor/blob/master/docs/debugging.md), which can be used to pause tests during execution and to view stack traces.
 
+### webdriver_update(options)
+
+#### options.browsers
+Type: `Array`
+Default: `["ie", "chrome"]`
+
+#### options.out_dir
+Type: `String`
+Default: `null`
+
+Where to store webdriver.
+Example:
+```javascript
+var path = require('path'),
+	...
+	webdriver_update = require("gulp-protractor").webdriver_update;
+
+gulp.task('webdriver-update', function (callback) {
+	webdriver_update({
+		out_dir: _path.resolve(pathRoot)
+	}, callback);
+});
+```
+
+#### options.args
+Type: `Array|Object`
+Default: `[]`
+
+Arguments get passed directly to the webdriver-manager call.
+Example 1:
+```javascript
+var path = require('path'),
+	...
+	webdriver_update = require("gulp-protractor").webdriver_update;
+
+gulp.task('webdriver-update', function (callback) {
+	webdriver_update({
+		args: {
+			out_dir: _path.resolve(pathRoot)
+		}
+	}, callback);
+});
+```
+Example 2:
+```javascript
+var path = require('path'),
+	...
+	webdriver_update = require("gulp-protractor").webdriver_update;
+
+gulp.task('webdriver-update', function (callback) {
+	webdriver_update({
+		args: [
+			'--out_dir=' + _path.resolve(pathRoot) + ''
+		]
+	}, callback);
+});
+```
+
 ## License
 
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
